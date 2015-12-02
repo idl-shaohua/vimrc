@@ -32,7 +32,6 @@ Bundle 'scrooloose/nerdcommenter'
 Bundle 'bling/vim-airline'
 Bundle 'tpope/vim-fugitive'
 Bundle 'taglist.vim'
-Bundle 'Valloric/YouCompleteMe'
 
 filetype plugin indent on
 
@@ -50,10 +49,12 @@ let g:airline#extensions#tabline#left_alt_sep = '|'
 let g:airline#extensions#tabline#buffer_nr_show = 1
 let g:airline_theme = 'wombat'
 
+let g:Powerline_symbols = 'fancy'
+set guifont=Consolas\ for\ Powerline\ FixedD:h11
+set encoding=utf-8
+
 " Taglist
 let Tlist_Use_Right_Window = 1
-let g:ycm_global_ycm_extra_conf = '/home/rockers7414/.vim/bundle/YouCompleteMe/third_party/ycmd/cpp/ycm/.ycm_extra_conf.py'
-let g:ycm_confirm_extra_conf = 0
 
 " Install plugins the first time vim runs
 if iCanHazVundle == 0
@@ -61,4 +62,3 @@ if iCanHazVundle == 0
     echo ""
     :BundleInstall
 endif
-
