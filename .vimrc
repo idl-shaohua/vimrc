@@ -3,7 +3,6 @@ set tabstop=4
 set expandtab
 
 set number
-set mouse=a
 syntax on
 
 set nocompatible " be iMproved
@@ -38,6 +37,8 @@ filetype plugin indent on
 " Key map
 nmap <F2> :NERDTreeToggle <CR>
 map <F3> :Tlist<CR>
+map <F4> :bp<CR>
+map <F5> :bn<CR>
 
 " Vim-airline setting
 set t_Co=256
