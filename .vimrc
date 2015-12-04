@@ -43,16 +43,13 @@ map <F5> :bn<CR>
 " Vim-airline setting
 set t_Co=256
 set laststatus=2
-let g:airline_powerline_fonts = 1
+let g:airline_powerline_fonts = 0
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#left_sep = ' '
 let g:airline#extensions#tabline#left_alt_sep = '|'
 let g:airline#extensions#tabline#buffer_nr_show = 1
 let g:airline_theme = 'wombat'
 
-let g:Powerline_symbols = 'fancy'
-set guifont=Consolas\ for\ Powerline\ FixedD:h11
-set encoding=utf-8
 
 " Taglist
 let Tlist_Use_Right_Window = 1
