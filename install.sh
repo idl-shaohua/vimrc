@@ -11,17 +11,17 @@ if ! hash ctags 2> /dev/null; then
     exit
 fi
 
-#echo "Install powerline fonts..."
-#git clone git@github.com:powerline/fonts.git
-#./fonts/install.sh
-#rm -rf ./fonts
+echo "Install powerline fonts..."
+git clone git@github.com:powerline/fonts.git
+./fonts/install.sh
+rm -rf ./fonts
 
-#echo "Install vim-airline-themes..."
-#git clone https://github.com/vim-airline/vim-airline-themes.git
-#cp ./vim-airline-themes ~/.vim
-#rm ./vim-airline-themes
+echo "Install vim-airline-themes..."
+git clone https://github.com/vim-airline/vim-airline-themes.git
+cp ./vim-airline-themes ~/.vim
+rm ./vim-airline-themes
 
-#echo "Install vimrc..."
-#git clone git@github.com:idl-shaohua/vimrc.git
-#cp ./vimrc/.vimrc ~/.vimrc
-#rm -rf ./vimrc
+echo "Install vimrc..."
+git clone git@github.com:idl-shaohua/vimrc.git
+cp ./vimrc/.vimrc ~/.vimrc
+rm -rf ./vimrc
