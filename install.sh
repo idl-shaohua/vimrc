@@ -2,13 +2,21 @@
 
 echo "Check environment..."
 if ! hash git 2> /dev/null; then
-    echo "Please install git"
-    exit
+    if hash apt-get 2> /dev/null; then
+        sudo apt-get install -y git
+    else
+        echo "Please install git"
+        exit
+    fi
 fi
 
 if ! hash ctags 2> /dev/null; then
-    echo "Please install ctags"
-    exit
+    if hash apt-get 2> /dev/null; then
+        sudo apt-get install -y ctags
+    else
+        echo "Please install ctags"
+        exit
+    fi
 fi
 
 echo "Install powerline fonts..."
