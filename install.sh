@@ -22,8 +22,8 @@ fi
 echo "Install powerline fonts..."
 git clone https://github.com/powerline/fonts.git
 ./fonts/install.sh
-cp ~/.local/share/fonts/* /usr/share/fonts
-fc-cache -vf /usr/share/fonts/
+sudo cp ~/.local/share/fonts/* /usr/share/fonts
+sudo fc-cache -vf /usr/share/fonts/
 rm -rf ./fonts
 
 echo "Install vim-airline-themes..."
