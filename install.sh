@@ -1,6 +1,15 @@
 #!/bin/bash
 
 echo "Check environment..."
+if ! hash vim 2> /dev/null; then
+    if hash apt-get 2> /dev/null; then
+        sudo apt-get install -y vim
+    else
+        echo "Please install vim"
+        exit;
+    fi
+fi
+
 if ! hash git 2> /dev/null; then
     if hash apt-get 2> /dev/null; then
         sudo apt-get install -y git
