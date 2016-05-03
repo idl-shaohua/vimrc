@@ -35,6 +35,9 @@ vim +PluginInstall +qall
 echo "Install powerline fonts..."
 git clone https://github.com/powerline/fonts.git
 ./fonts/install.sh
+if [ ! -d "/usr/share/fonts" ]; then
+    mkdir -p /usr/share/fonts
+fi
 sudo cp ~/.local/share/fonts/* /usr/share/fonts/
 sudo fc-cache -vf /usr/share/fonts/
 rm -rf ./fonts
