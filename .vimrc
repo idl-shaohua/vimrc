@@ -30,8 +30,8 @@ set tabstop=4
 set expandtab
 set shiftwidth=4
 
-highlight OverLength ctermbg=red ctermfg=white guibg=#592929
-match OverLength /\%81v.\+/
+autocmd FileType cpp,h highlight OverLength ctermbg=red ctermfg=white guibg=#592929
+autocmd FileType cpp,h match OverLength /\%81v.\+/
 syntax on
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
