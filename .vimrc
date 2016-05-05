@@ -29,6 +29,7 @@ filetype plugin indent on
 set tabstop=4
 set expandtab
 set shiftwidth=4
+set number
 
 autocmd FileType cpp,h highlight OverLength ctermbg=red ctermfg=white guibg=#592929
 autocmd FileType cpp,h match OverLength /\%81v.\+/
