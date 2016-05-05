@@ -45,4 +45,5 @@ rm -rf ./fonts
 echo "Install vimrc..."
 git clone https://github.com/idl-shaohua/vimrc.git
 cp ./vimrc/.vimrc ~/.vimrc
+vim +PluginInstall +qall
 rm -rf ./vimrc
