@@ -47,3 +47,8 @@ git clone https://github.com/idl-shaohua/vimrc.git
 cp ./vimrc/.vimrc ~/.vimrc
 rm -rf ./vimrc
 vim +PluginInstall +qall
+
+echo "Install command-t"
+cd ~/.vim/bundle/command-t/ruby/command-t
+ruby extconf.rb
+make

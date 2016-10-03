@@ -17,6 +17,7 @@ Plugin 'scrooloose/nerdcommenter'
 Plugin 'bling/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
 Plugin 'flazz/vim-colorschemes'
+Plugin 'wincent/command-t'
 
 " HTML
 Plugin 'rstacruz/sparkup', {'rtp': 'vim/'}
