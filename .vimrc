@@ -18,12 +18,15 @@ Plugin 'bling/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
 Plugin 'flazz/vim-colorschemes'
 Plugin 'wincent/command-t'
+Plugin 'taglist.vim'
+Plugin 'matze/vim-move'
 
 " HTML
 Plugin 'rstacruz/sparkup', {'rtp': 'vim/'}
 
 " JAVA
 Plugin 'javacomplete'
+Plugin 'jcommenter.vim'
 
 call vundle#end()
 filetype plugin indent on
@@ -41,8 +44,9 @@ autocmd FileType cpp,h highlight OverLength ctermbg=red ctermfg=white guibg=#592
 autocmd FileType cpp,h match OverLength /\%81v.\+/
 
 " JAVA
-setlocal omnifunc=javacomplete#Complete
+autocmd FileType java setlocal omnifunc=javacomplete#Complete
 autocmd FileType java inoremap <buffer> . .<C-X><C-O><C-P>
+autocmd FileType java map <C-d> :call JCommentWriter()<CR>
 
 colorscheme Revolution 
 syntax on
@@ -51,8 +55,8 @@ syntax on
 " Configure key maps
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 nmap <F2> :NERDTreeToggle <CR>
-map <F3> :bp <CR>
-map <F4> :bn <CR>
+map <F4> :bp <CR>
+map <F5> :bn <CR>
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Configure airline
@@ -66,3 +70,17 @@ let g:airline#extensions#tabline#left_alt_sep='|'
 let g:airline#extensions#tabline#buffer_nr_show=1
 let g:airline_theme='base16_flat'
 
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Configure taglist
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+let Tlist_Show_One_File=1
+let Tlist_Exit_OnlyWindow=1
+let Tlist_Use_Right_Window=1
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Configure vim-move
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+vmap <C-j> <Plug>MoveBlockDown
+vmap <C-k> <Plug>MoveBlockUp
+nmap <C-j> <Plug>MoveLineDown
+nmap <C-k> <Plug>MoveLineUp
