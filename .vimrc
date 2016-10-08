@@ -54,9 +54,10 @@ syntax on
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Configure key maps
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-nmap <F2> :NERDTreeToggle <CR>
-map <F4> :bp <CR>
-map <F5> :bn <CR>
+map <F2> :NERDTreeToggle <CR>
+map <F3> :Tlist <CR>
+map <C-h> :bp <CR>
+map <C-l> :bn <CR>
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Configure airline
@@ -73,6 +74,7 @@ let g:airline_theme='base16_flat'
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Configure taglist
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+let Tlist_Ctags_Cmd='/usr/local/bin/ctags'
 let Tlist_Show_One_File=1
 let Tlist_Exit_OnlyWindow=1
 let Tlist_Use_Right_Window=1
