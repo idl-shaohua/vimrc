@@ -20,6 +20,7 @@ Plugin 'flazz/vim-colorschemes'
 Plugin 'wincent/command-t'
 Plugin 'taglist.vim'
 Plugin 'matze/vim-move'
+Plugin 'rhysd/vim-clang-format'
 
 " HTML
 Plugin 'rstacruz/sparkup', {'rtp': 'vim/'}
