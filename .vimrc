@@ -26,8 +26,8 @@ Plugin 'rhysd/vim-clang-format'
 Plugin 'rstacruz/sparkup', {'rtp': 'vim/'}
 
 " JAVA
-Plugin 'javacomplete'
-Plugin 'jcommenter.vim'
+Plugin 'artur-shaik/vim-javacomplete2'
+"Plugin 'javacomplete'
 
 call vundle#end()
 filetype plugin indent on
@@ -40,14 +40,14 @@ set expandtab
 set shiftwidth=4
 set number
 
-" C++
-autocmd FileType cpp,h highlight OverLength ctermbg=red ctermfg=white guibg=#592929
-autocmd FileType cpp,h match OverLength /\%81v.\+/
-
 " JAVA
 autocmd FileType java setlocal omnifunc=javacomplete#Complete
 autocmd FileType java inoremap <buffer> . .<C-X><C-O><C-P>
-autocmd FileType java map <C-d> :call JCommentWriter()<CR>
+
+" Frontend
+autocmd FileType javascript setlocal shiftwidth=2 tabstop=2
+autocmd FileType typescript setlocal ts=2 sw=2
+autocmd FileType html setlocal shiftwidth=2 tabstop=2
 
 colorscheme Revolution 
 syntax on
@@ -75,7 +75,7 @@ let g:airline_theme='base16_flat'
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Configure taglist
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-let Tlist_Ctags_Cmd='/usr/local/bin/ctags'
+"let Tlist_Ctags_Cmd='/usr/local/bin/ctags'
 let Tlist_Show_One_File=1
 let Tlist_Exit_OnlyWindow=1
 let Tlist_Use_Right_Window=1
