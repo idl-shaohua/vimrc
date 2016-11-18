@@ -27,7 +27,10 @@ Plugin 'rstacruz/sparkup', {'rtp': 'vim/'}
 
 " JAVA
 Plugin 'artur-shaik/vim-javacomplete2'
-"Plugin 'javacomplete'
+
+" TYPESCRIPT
+Plugin 'shougo/vimproc.vim'
+Plugin 'quramy/tsuquyomi'
 
 call vundle#end()
 filetype plugin indent on
